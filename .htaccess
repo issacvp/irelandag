@@ -1,0 +1,6 @@
+RewriteEngine on
+
+
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} !^www\.
+RewriteRule ^ https://www.irelandag.net%{REQUEST_URI} [NC,L]
